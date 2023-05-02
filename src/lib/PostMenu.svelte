@@ -55,6 +55,7 @@
           message: text || "",
         }),
       });
+      document.querySelector("textarea").value = "";
       canPost = false;
       setTimeout(() => (canPost = true), 3000);
     } else {
@@ -71,7 +72,7 @@
   </p>
   <div class="flex w-96">
     <textarea
-      maxlength="500"
+      maxlength="100"
       placeholder="Type your message"
       rows="3"
       on:input={noNewLine}
